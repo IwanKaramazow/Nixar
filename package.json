@@ -1,0 +1,14 @@
+{
+  "name": "nixar",
+  "version": "0.0.1",
+  "description": "ray tracer",
+  "main": "Index.ml",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "bs-platform": "^7.0.0-dev.2"
+  }
+}

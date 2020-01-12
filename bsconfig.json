@@ -1,0 +1,16 @@
+{
+  "name": "nixar",
+  "version": "0.0.1",
+  "sources": {
+    "dir" : "src"
+  },
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "warnings": {
+    "error" : "+101"
+  },
+  "pp-flags": "../napkinscript/lib/napkinscript.exe"
+}
