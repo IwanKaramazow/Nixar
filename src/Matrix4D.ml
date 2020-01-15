@@ -16,7 +16,7 @@ let getUnsafe = (t: t, ~row, ~col) =>
 let setUnsafe = (t, x, ~row, ~col) =>
   t->Belt.Array.getUnsafe(row)->Belt.Array.setUnsafe(col, x)
 
-let identityMatrix = [
+let identityMatrix = () => [
   [1., 0., 0., 0.],
   [0., 1., 0., 0.],
   [0., 0., 1., 0.],
@@ -273,14 +273,14 @@ let () = {
     [4., 8., 16., 32.],
   ]
   
-  assert equals(matrix->multiply(identityMatrix), matrix)
+  assert equals(matrix->multiply(identityMatrix()), matrix)
 }
 
 // multiplying the identity matrix by a tuple
 let () = {
   let a = Tuple.makeTuple(1., 2., 3., 4.)
   
-  assert Tuple.equals(identityMatrix->multiplyTuple(a), a)
+  assert Tuple.equals(identityMatrix()->multiplyTuple(a), a)
 }
 
 // transposing matrices
@@ -302,7 +302,7 @@ let () = {
   assert equals(transpose(m), transposed)
   
   // transposing identity matrix
-  assert equals(transpose(identityMatrix), identityMatrix)
+  assert equals(transpose(identityMatrix()), identityMatrix())
 }
 
 // submatrix of 4x4 matrix is a 3x3 matrix

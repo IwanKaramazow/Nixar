@@ -3,10 +3,10 @@
 
 
 function equals(a, b) {
-  return Math.abs(a - b) < 0.00001;
+  return Math.abs(a - b) < 0.0001;
 }
 
-var epsilon = 0.00001;
+var epsilon = 0.0001;
 
 exports.epsilon = epsilon;
 exports.equals = equals;

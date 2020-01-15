@@ -12,5 +12,6 @@
   "warnings": {
     "error" : "+101"
   },
+  "bsc-flags": ["-bs-super-errors"],
   "pp-flags": "../napkinscript/lib/napkinscript.exe"
 }

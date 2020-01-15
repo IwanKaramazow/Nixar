@@ -24,32 +24,34 @@ function setUnsafe(t, x, row, col) {
   return /* () */0;
 }
 
-var identityMatrix = /* array */[
-  /* array */[
-    1,
-    0,
-    0,
-    0
-  ],
-  /* array */[
-    0,
-    1,
-    0,
-    0
-  ],
-  /* array */[
-    0,
-    0,
-    1,
-    0
-  ],
-  /* array */[
-    0,
-    0,
-    0,
-    1
-  ]
-];
+function identityMatrix(param) {
+  return /* array */[
+          /* array */[
+            1,
+            0,
+            0,
+            0
+          ],
+          /* array */[
+            0,
+            1,
+            0,
+            0
+          ],
+          /* array */[
+            0,
+            0,
+            1,
+            0
+          ],
+          /* array */[
+            0,
+            0,
+            0,
+            1
+          ]
+        ];
+}
 
 function equals(matrix1, matrix2) {
   var _i = 0;
@@ -564,7 +566,7 @@ var matrix$1 = /* array */[
   ]
 ];
 
-if (!equals(multiply(matrix$1, identityMatrix), matrix$1)) {
+if (!equals(multiply(matrix$1, identityMatrix(/* () */0)), matrix$1)) {
   throw [
         Caml_builtin_exceptions.assert_failure,
         /* tuple */[
@@ -577,7 +579,7 @@ if (!equals(multiply(matrix$1, identityMatrix), matrix$1)) {
 
 var a = Tuple.makeTuple(1, 2, 3, 4);
 
-if (!Tuple.equals(multiplyTuple(identityMatrix, a), a)) {
+if (!Tuple.equals(multiplyTuple(identityMatrix(/* () */0), a), a)) {
   throw [
         Caml_builtin_exceptions.assert_failure,
         /* tuple */[
@@ -653,7 +655,7 @@ if (!equals(transpose(m$1), transposed)) {
       ];
 }
 
-if (!equals(transpose(identityMatrix), identityMatrix)) {
+if (!equals(transpose(identityMatrix(/* () */0)), identityMatrix(/* () */0))) {
   throw [
         Caml_builtin_exceptions.assert_failure,
         /* tuple */[
